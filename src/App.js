@@ -1,7 +1,21 @@
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import NavBar from './navbar/navBar';
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  return (
+    <>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" />
+          <Route path="/services" />
+          <Route path="/aboutus" />
+          <Route path="/contact" />
+        </Routes>
+      </Router>
+    </>
+  );
+};
 
 export default App;
