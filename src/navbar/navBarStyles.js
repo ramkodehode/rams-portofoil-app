@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 export const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   background-color: ${(props) => props.color};
   padding: 35px 0px;
@@ -12,7 +13,6 @@ export const NavBarContainer = styled.div`
 
 export const NavBarStyle = styled.nav`
   font-family: Consolas;
-
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -24,13 +24,15 @@ export const NavBarLogo = styled.div`
 
   color: ${(props) => props.color};
   text-decoration: none;
+  height: 25px;
   font-size: 21px;
   flex-direction: column;
-  margin-left: 20px;
-  border: 3px solid red;
+  overflow: hidden;
+  border: 3px solid #8892b0;
   border-radius: 50%;
   padding: 12px 20px;
   font-weight: bold;
+  color: #3bc9f5;
   text-decoration: none;
   :hover,
   :focus {
@@ -56,7 +58,7 @@ export const NavBarLinkWrapperContainer = styled.div`
 export const NavBarLink = styled(Link)`
   /* border: 1.6px solid white;
   border-radius: 15px; */
-  color: orange;
+  color: #3bc9f5;
   font-size: 16px;
   margin: 10px;
   padding: 7px 15px;
@@ -68,18 +70,17 @@ export const NavBarLink = styled(Link)`
   }
 
   :before {
-    content: '</';
-    color: red;
+    content: '<';
+    color: #8892b0;
   }
   :after {
-    content: '>';
-    color: red;
+    content: '/>';
+    color: #8892b0;
   }
 `;
 
 export const NavBarElements = styled.div`
   display: flex;
-  width: 70%;
 `;
 
 export const Photo = styled.figure``;

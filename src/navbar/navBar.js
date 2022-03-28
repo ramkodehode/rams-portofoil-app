@@ -9,15 +9,16 @@ import {
 } from './navBarStyles';
 import {useState} from 'react';
 
+// Functions used on page
+const handleClick = () => {};
+
 const NavBar = () => {
   const [color, setColor] = useState();
 
-  const handleClick = () => {};
-
   return (
-    <NavBarContainer color={color ? '#20232A' : '#282D3F'}>
+    <NavBarContainer color={color ? '#0A192F' : '#0A192F'}>
       <NavBarElements>
-        <NavBarLogo color="orange">R</NavBarLogo>
+        <NavBarLogo>R</NavBarLogo>
         <NavBarStyle>
           <NavBarLinkWrapperContainer>
             <NavBarLinkWrapper>

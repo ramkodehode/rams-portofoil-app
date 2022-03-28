@@ -3,27 +3,54 @@ import styled from 'styled-components';
 export const Content = styled.div`
   font-family: Consolas;
   display: flex;
-  justify-content: ;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   background-color: ${(props) => props.color};
   width: 100%;
+  margin-top: 30px;
 
   /* box-shadow: 1px 1px 5px grey; */
 `;
 
 export const Elements = styled.div`
   margin-top: 30px;
-  margin-left: 90px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-export const Intro = styled.div`
+export const Image = styled.img`
+  width: 400px;
+  height: 400px;
+`;
+
+export const IntroTwo = styled.div`
+  width: 94%;
+  justify-content: end;
   display: flex;
   :before {
-    content: '</';
+    content: '<';
     color: #3bc9f5;
   }
   :after {
-    content: '>';
+    content: '/>';
+    color: #3bc9f5;
+  }
+
+  color: orange;
+  font-size: 21px;
+`;
+export const IntroOne = styled.div`
+  width: 97%;
+  justify-content: start;
+  display: flex;
+  :before {
+    content: '<';
+    color: #3bc9f5;
+  }
+  :after {
+    content: '/>';
     color: #3bc9f5;
   }
 
@@ -35,15 +62,16 @@ export const Name = styled.p`
   /* font-family: Lucida Console; */
   font-weight: bold;
   color: #8892b0;
-  font-size: 56px;
-  margin-top: 20px;
+  font-size: 48px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   width: 80%;
   :before {
-    content: '</';
+    content: '<';
     color: #3bc9f5;
   }
   :after {
-    content: '>';
+    content: '/>';
     color: #3bc9f5;
   }
 `;

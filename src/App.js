@@ -9,12 +9,11 @@ const App = () => {
       <Router>
         <NavBar />
         <ContentPage />
-
         <Routes>
           <Route path="/" />
-          <Route path="/services" />
-          <Route path="/aboutus" />
-          <Route path="/contact" />
+          <Route path="/ommeg" />
+          <Route path="/arbeid" />
+          <Route path="/Kontakt" />
         </Routes>
       </Router>
     </>
