@@ -38,7 +38,7 @@ export const IntroTwo = styled.div`
     color: #3bc9f5;
   }
 
-  color: orange;
+  color: #e3d01d;
   font-size: 21px;
 `;
 export const IntroOne = styled.div`
@@ -54,7 +54,7 @@ export const IntroOne = styled.div`
     color: #3bc9f5;
   }
 
-  color: orange;
+  color: #e3d01d;
   font-size: 21px;
 `;
 
