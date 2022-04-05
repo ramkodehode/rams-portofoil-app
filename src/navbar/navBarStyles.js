@@ -33,18 +33,21 @@ export const NavBarLogoWrapper = styled.div`
 export const NavBarLogo = styled.div`
   font-family: monospace;
   color: ${(props) => props.color};
-  text-decoration: none;
-  height: 25px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   font-size: 21px;
-  border: 3px solid #3bc9f5;
+  border: 3px solid #61dafb;
   border-radius: 50%;
-  padding: 12px 20px;
   font-weight: bold;
-  color: #3bc9f5;
+  color: #61dafb;
   text-decoration: none;
   :hover,
   :focus {
-    color: #3bc9f5;
+    color: #61dafb;
     background-color: rgba(192, 192, 192, 0.1);
   }
   cursor: pointer;
@@ -65,7 +68,7 @@ export const NavBarLinkWrapperContainer = styled.div`
 export const NavBarLink = styled(Link)`
   /* border: 1.6px solid white;
   border-radius: 15px; */
-  color: #8892b0;
+  color: #ccd6f6;
   font-size: 16px;
   margin: 10px;
   padding: 7px 15px;
@@ -73,16 +76,16 @@ export const NavBarLink = styled(Link)`
   text-decoration: none;
   :hover,
   :focus {
-    color: #3bc9f5;
+    color: #61dafb;
   }
 
   :before {
     content: '<';
-    color: #3bc9f5;
+    color: #61dafb;
   }
   :after {
     content: '/>';
-    color: #3bc9f5;
+    color: #61dafb;
   }
 `;
 

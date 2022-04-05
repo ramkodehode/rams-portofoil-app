@@ -30,14 +30,14 @@ export const IntroTwo = styled.div`
   justify-content: end;
   display: flex;
 
-  color: grey;
+  color: #8892b0;
   font-size: 21px;
 `;
 export const IntroOne = styled.div`
   width: 97%;
   justify-content: start;
   display: flex;
-  color: #3bc9f5;
+  color: #61dafb;
   font-size: 21px;
 `;
 

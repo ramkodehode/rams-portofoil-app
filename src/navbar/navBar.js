@@ -20,9 +20,7 @@ const NavBar = () => {
       <NavBarContainer color={color ? '#0A192F' : '#0A192F'}>
         <NavBarElements>
           <NavBarStyle>
-            <NavBarLogoWrapper>
-              <NavBarLogo>R</NavBarLogo>
-            </NavBarLogoWrapper>
+            <NavBarLogo>R</NavBarLogo>
 
             <NavBarLinkWrapperContainer>
               <NavBarLinkWrapper>
