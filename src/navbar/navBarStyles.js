@@ -5,10 +5,16 @@ export const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: end;
   background-color: ${(props) => props.color};
   padding: 35px 0px;
   /* box-shadow: 1px 1px 5px grey; */
+`;
+
+export const NavBarElements = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 `;
 
 export const NavBarStyle = styled.nav`
@@ -16,19 +22,21 @@ export const NavBarStyle = styled.nav`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+`;
+
+export const NavBarLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 `;
 
 export const NavBarLogo = styled.div`
   font-family: monospace;
-
   color: ${(props) => props.color};
   text-decoration: none;
   height: 25px;
   font-size: 21px;
-  flex-direction: column;
-  overflow: hidden;
-  border: 3px solid #8892b0;
+  border: 3px solid #3bc9f5;
   border-radius: 50%;
   padding: 12px 20px;
   font-weight: bold;
@@ -36,14 +44,14 @@ export const NavBarLogo = styled.div`
   text-decoration: none;
   :hover,
   :focus {
-    color: white;
+    color: #3bc9f5;
+    background-color: rgba(192, 192, 192, 0.1);
   }
   cursor: pointer;
 `;
 
 export const NavBarLinkWrapper = styled.div`
   display: flex;
-  justify-content: end;
   flex-direction: row;
   margin-right: 10px;
   color: ${(props) => props.color};
@@ -51,14 +59,13 @@ export const NavBarLinkWrapper = styled.div`
 
 export const NavBarLinkWrapperContainer = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
 `;
 
 export const NavBarLink = styled(Link)`
   /* border: 1.6px solid white;
   border-radius: 15px; */
-  color: #3bc9f5;
+  color: #8892b0;
   font-size: 16px;
   margin: 10px;
   padding: 7px 15px;
@@ -66,21 +73,17 @@ export const NavBarLink = styled(Link)`
   text-decoration: none;
   :hover,
   :focus {
-    color: white;
+    color: #3bc9f5;
   }
 
   :before {
     content: '<';
-    color: #8892b0;
+    color: #3bc9f5;
   }
   :after {
     content: '/>';
-    color: #8892b0;
+    color: #3bc9f5;
   }
-`;
-
-export const NavBarElements = styled.div`
-  display: flex;
 `;
 
 export const Photo = styled.figure``;

@@ -29,51 +29,26 @@ export const IntroTwo = styled.div`
   width: 94%;
   justify-content: end;
   display: flex;
-  :before {
-    content: '<';
-    color: #3bc9f5;
-  }
-  :after {
-    content: '/>';
-    color: #3bc9f5;
-  }
 
-  color: #e3d01d;
+  color: grey;
   font-size: 21px;
 `;
 export const IntroOne = styled.div`
   width: 97%;
   justify-content: start;
   display: flex;
-  :before {
-    content: '<';
-    color: #3bc9f5;
-  }
-  :after {
-    content: '/>';
-    color: #3bc9f5;
-  }
-
-  color: #e3d01d;
+  color: #3bc9f5;
   font-size: 21px;
 `;
 
 export const Name = styled.p`
   /* font-family: Lucida Console; */
   font-weight: bold;
-  color: #8892b0;
+  color: #ccd6f6;
   font-size: 48px;
   margin-top: 6px;
   margin-bottom: 6px;
   width: 80%;
-  :before {
-    content: '<';
-    color: #3bc9f5;
-  }
-  :after {
-    content: '/>';
-    color: #3bc9f5;
-  }
 `;
 
 export const Heading = styled.h1`
@@ -88,7 +63,7 @@ export const Heading = styled.h1`
 `;
 
 export const AboutMe = styled.p`
-  color: #8892b0;
+  color: red;
   display: flex;
   flex-direction: column;
   width: 80%;
