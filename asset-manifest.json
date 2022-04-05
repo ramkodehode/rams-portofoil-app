@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rams-portofoil-app/static/css/main.be27f3d2.css",
-    "main.js": "/rams-portofoil-app/static/js/main.9384bb5d.js",
+    "main.js": "/rams-portofoil-app/static/js/main.5c65525f.js",
     "static/media/test.jpg": "/rams-portofoil-app/static/media/test.2cea54848755d183e3ec.jpg",
     "index.html": "/rams-portofoil-app/index.html",
     "main.be27f3d2.css.map": "/rams-portofoil-app/static/css/main.be27f3d2.css.map",
-    "main.9384bb5d.js.map": "/rams-portofoil-app/static/js/main.9384bb5d.js.map"
+    "main.5c65525f.js.map": "/rams-portofoil-app/static/js/main.5c65525f.js.map"
   },
   "entrypoints": [
     "static/css/main.be27f3d2.css",
-    "static/js/main.9384bb5d.js"
+    "static/js/main.5c65525f.js"
   ]
 }
