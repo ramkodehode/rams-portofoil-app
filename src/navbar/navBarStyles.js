@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-export const NavBarContainer = styled.div`
+export const NavBarContainer = styled.header`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -11,26 +11,9 @@ export const NavBarContainer = styled.div`
   /* box-shadow: 1px 1px 5px grey; */
 `;
 
-export const NavBarElements = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-`;
-
-export const NavBarStyle = styled.nav`
-  font-family: Consolas;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-`;
-
-export const NavBarLogoWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-`;
-
 export const NavBarLogo = styled.div`
+  margin-right: 610px;
+
   font-family: monospace;
   color: ${(props) => props.color};
   height: 45px;
@@ -53,16 +36,24 @@ export const NavBarLogo = styled.div`
   cursor: pointer;
 `;
 
+export const NavBarElements = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+`;
+
+export const NavBarStyle = styled.nav`
+  font-family: Consolas;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+`;
+
 export const NavBarLinkWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-right: 10px;
   color: ${(props) => props.color};
-`;
-
-export const NavBarLinkWrapperContainer = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export const NavBarLink = styled(Link)`

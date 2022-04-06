@@ -18,18 +18,16 @@ const NavBar = () => {
   return (
     <>
       <NavBarContainer color={color ? '#0A192F' : '#0A192F'}>
+        <NavBarLogo>R</NavBarLogo>
+
         <NavBarElements>
           <NavBarStyle>
-            <NavBarLogo>R</NavBarLogo>
-
-            <NavBarLinkWrapperContainer>
-              <NavBarLinkWrapper>
-                <NavBarLink to="/">Om meg</NavBarLink>
-                <NavBarLink to="/services">Arbeid</NavBarLink>
-                <NavBarLink to="aboutus">Erfaring</NavBarLink>
-                <NavBarLink to="contact">Kontakt</NavBarLink>
-              </NavBarLinkWrapper>
-            </NavBarLinkWrapperContainer>
+            <NavBarLinkWrapper>
+              <NavBarLink to="/">Om meg</NavBarLink>
+              <NavBarLink to="/services">Arbeid</NavBarLink>
+              <NavBarLink to="aboutus">Erfaring</NavBarLink>
+              <NavBarLink to="contact">Kontakt</NavBarLink>
+            </NavBarLinkWrapper>
           </NavBarStyle>
         </NavBarElements>
       </NavBarContainer>
