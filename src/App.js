@@ -1,13 +1,13 @@
 import './App.css';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-import NavBar from './navbar/navBar';
 import ContentPage from './content/content';
+import Navbar from './components/Navbar/NavbarElement';
 
 const App = () => {
   return (
     <>
       <Router>
-        <NavBar />
+        <Navbar />
         <ContentPage />
         <Routes>
           <Route path="/" />

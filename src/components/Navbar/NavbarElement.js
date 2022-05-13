@@ -6,13 +6,13 @@ import {
   NavBarContainer,
   NavBarLinkWrapperContainer,
   NavBarElements,
-} from './navBarStyles';
+} from './NavbarElement.Styles';
 import {useState} from 'react';
 
 // Functions used on page
 const handleClick = () => {};
 
-const NavBar = () => {
+const Navbar = () => {
   const [color, setColor] = useState();
 
   return (
@@ -35,4 +35,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
