@@ -8,7 +8,7 @@ import {
   Name,
   Image,
 } from './contentStyle';
-import test from '../img/test.jpg';
+import test from '../images/test.jpg';
 const ContentPage = () => {
   return (
     <div>

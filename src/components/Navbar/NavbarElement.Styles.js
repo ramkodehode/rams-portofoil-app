@@ -1,19 +1,18 @@
-import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const NavBarContainer = styled.header`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  background-color: ${(props) => props.color};
-  padding: 35px 0px;
-  /* box-shadow: 1px 1px 5px grey; */
+export const Nav = styled.nav`
+  background: #0a192f;
+  padding: 10px;
 `;
 
-export const NavBarLogo = styled.div`
-  margin-right: 610px;
+export const NavbarContainer = styled.div`
+  display: flex;
+  font-family: monospace;
+`;
 
+export const NavLogo = styled.div`
+  margin-right: 610px;
   font-family: monospace;
   color: ${(props) => props.color};
   height: 45px;
@@ -56,7 +55,7 @@ export const NavBarLinkWrapper = styled.div`
   color: ${(props) => props.color};
 `;
 
-export const NavBarLink = styled(Link)`
+export const NavbarLink = styled(Link)`
   /* border: 1.6px solid white;
   border-radius: 15px; */
   color: #ccd6f6;
@@ -71,11 +70,11 @@ export const NavBarLink = styled(Link)`
   }
 
   :before {
-    content: '<';
+    content: "<";
     color: #61dafb;
   }
   :after {
-    content: '/>';
+    content: "/>";
     color: #61dafb;
   }
 `;
