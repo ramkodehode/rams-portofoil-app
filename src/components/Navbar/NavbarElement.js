@@ -1,21 +1,48 @@
+import { useState } from "react";
+import { CVButton } from "../Button/Button.styles";
 import {
-  NavBarStyle,
   NavbarLink,
   NavLogo,
   Nav,
+  NavMenu,
   NavbarContainer,
-} from "./NavbarElement.Styles";
+  NavLogoContainer,
+  NavItem,
+  MobilIcon,
+} from "./NavbarElement.styles";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo>R</NavLogo>
-          <NavbarLink to="/">Om meg</NavbarLink>
-          <NavbarLink to="/services">Arbeid</NavbarLink>
-          <NavbarLink to="aboutus">Erfaring</NavbarLink>
-          <NavbarLink to="contact">Kontakt</NavbarLink>
+          <NavLogoContainer>
+            <NavLogo to="/">R</NavLogo>
+          </NavLogoContainer>
+          <MobilIcon onClick={handleClick}>
+            {click ? <FaTimes size={35} /> : <FaBars size={35} />}
+          </MobilIcon>
+
+          <NavMenu>
+            <NavItem>
+              <NavbarLink to="/">Om meg</NavbarLink>
+            </NavItem>
+            <NavItem>
+              <NavbarLink to="aboutus">Erfaring</NavbarLink>
+            </NavItem>
+
+            <NavItem>
+              <NavbarLink to="/services">Prosjekter</NavbarLink>
+            </NavItem>
+
+            <NavItem>
+              <NavbarLink to="contact">Kontakt</NavbarLink>
+            </NavItem>
+          </NavMenu>
         </NavbarContainer>
       </Nav>
     </>

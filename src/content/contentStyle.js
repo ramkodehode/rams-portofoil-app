@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Content = styled.div`
   font-family: Consolas;
@@ -8,6 +8,7 @@ export const Content = styled.div`
   background-color: ${(props) => props.color};
   width: 100%;
   margin-top: 30px;
+  bottom: 20%;
 
   /* box-shadow: 1px 1px 5px grey; */
 `;
@@ -20,20 +21,7 @@ export const Elements = styled.div`
   justify-content: center;
 `;
 
-export const Image = styled.img`
-  width: 400px;
-  height: 400px;
-`;
-
-export const IntroTwo = styled.div`
-  width: 94%;
-  justify-content: end;
-  display: flex;
-
-  color: #8892b0;
-  font-size: 21px;
-`;
-export const IntroOne = styled.div`
+export const IntroOne = styled.h1`
   width: 97%;
   justify-content: start;
   display: flex;
@@ -41,30 +29,52 @@ export const IntroOne = styled.div`
   font-size: 21px;
 `;
 
-export const Name = styled.p`
+export const Name = styled.h2`
   /* font-family: Lucida Console; */
   font-weight: bold;
   color: #ccd6f6;
-  font-size: 48px;
+  font-size: clamp(40px, 90vw, 80px);
   margin-top: 6px;
   margin-bottom: 6px;
-  width: 80%;
+  width: 90%;
 `;
 
-export const Heading = styled.h1`
-  font-family: Arial, Helvetica, sans-serif;
+export const IntroTwo = styled.h3`
+  width: 94%;
+  justify-content: end;
+  display: flex;
+
+  color: #8892b0;
+`;
+
+export const Heading = styled.h4`
   margin-top: 3em;
   color: rgb(212, 212, 212);
-  color: linear-gradient(
-    43deg,
-    rgba(212, 212, 212, 1) 0%,
-    rgba(159, 159, 159, 1) 100%
-  );
+  font-family: Consolas;
+  color: #ccd6f6;
+  font-size: 28px;
+  :before {
+    content: "<";
+    color: #61dafb;
+  }
+  :after {
+    content: "/>";
+    color: #61dafb;
+  }
 `;
 
 export const AboutMe = styled.p`
-  color: red;
-  display: flex;
+  color: #8892b0;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
+  margin-top 20px;
+  float: right;
+`;
+
+export const Image = styled.img`
+  max-width: 30%;
+  height: auto;
+  margin-left: 30px;
+  float: right;
+  clear: both;
 `;
