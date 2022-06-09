@@ -28,7 +28,7 @@ const Navbar = () => {
             {click ? <FaTimes /> : <FaBars />}
           </MobilIcon>
 
-          <NavMenu onClick={handleClick}>
+          <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks to="/">Om meg</NavLinks>
             </NavItem>

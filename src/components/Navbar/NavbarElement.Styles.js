@@ -74,19 +74,23 @@ export const NavMenu = styled.ul`
   text-align: center;
 
   @media screen and (max-width: 960px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    top: 80px;
+    left: ${({ click }) => (click ? 0 : "-100%")};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #0a192f;
   }
 `;
 
 export const NavItem = styled.li`
   height: 80px;
-
-  @media screen and (max-width: 960px) {
-    width: 100%;
-    &:hover {
-      border: none;
-    }
-  }
+  border-bottom: 2px solid transparent;
 `;
 
 export const NavLinks = styled(LinkS)`
