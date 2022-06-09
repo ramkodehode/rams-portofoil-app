@@ -7,6 +7,8 @@ import {
   IntroOne,
   Name,
   Image,
+  Cursor,
+  NameContainer,
 } from "./contentStyle";
 import test from "../images/test.jpg";
 import { CVButton } from "../components/Button/Button.styles";
@@ -15,7 +17,14 @@ const ContentPage = () => {
     <Content>
       <Elements>
         <IntroOne>Hei, jeg heter</IntroOne>
-        <Name>Ramanan Subramaniam.</Name>
+
+        <NameContainer>
+          <Name>
+            Ramanan Subramaniam.
+            <Cursor />
+          </Name>
+        </NameContainer>
+
         <IntroTwo>
           - Liker å bygge ting. Kall meg gjerne Ram for å gjøre ting litt
           enklere.

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 
 export const Content = styled.div`
   font-family: Consolas;
@@ -29,21 +30,44 @@ export const IntroOne = styled.h1`
   font-size: 21px;
 `;
 
+export const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  left: 0;
+`;
+
 export const Name = styled.h2`
   /* font-family: Lucida Console; */
   font-weight: bold;
   color: #ccd6f6;
-  font-size: clamp(40px, 90vw, 80px);
+  font-size: clamp(90px, 10vw, 80px);
   margin-top: 6px;
   margin-bottom: 6px;
-  width: 90%;
+  width: 100%;
+`;
+
+const cursorBlink = keyframes`
+  0% {background: #0a192f}
+  50% {background: #61dafb}
+  100% {background: #0a192f}
+`;
+
+export const Cursor = styled.div`
+  line-height: 17px;
+  width: 19px;
+  height: 70px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 260px;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-name: ${cursorBlink};
 `;
 
 export const IntroTwo = styled.h3`
   width: 94%;
   justify-content: end;
   display: flex;
-
   color: #8892b0;
 `;
 
@@ -67,7 +91,7 @@ export const AboutMe = styled.p`
   color: #8892b0;
   flex-direction: column;
   width: 100%;
-  margin-top 20px;
+  margin-top: 20px;
   float: right;
 `;
 
@@ -76,5 +100,5 @@ export const Image = styled.img`
   height: auto;
   margin-left: 30px;
   float: right;
-  clear: both;
+  border-radius: 3%;
 `;

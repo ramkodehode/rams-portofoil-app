@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CVButton } from "../Button/Button.styles";
 import {
-  NavbarLink,
+  NavLinks,
   NavLogo,
   Nav,
   NavMenu,
@@ -23,25 +23,24 @@ const Navbar = () => {
           <NavLogoContainer>
             <NavLogo to="/">R</NavLogo>
           </NavLogoContainer>
+
           <MobilIcon onClick={handleClick}>
-            {click ? <FaTimes size={35} /> : <FaBars size={35} />}
+            {click ? <FaTimes /> : <FaBars />}
           </MobilIcon>
 
-          <NavMenu>
+          <NavMenu onClick={handleClick}>
             <NavItem>
-              <NavbarLink to="/">Om meg</NavbarLink>
-            </NavItem>
-            <NavItem>
-              <NavbarLink to="aboutus">Erfaring</NavbarLink>
+              <NavLinks to="/">Om meg</NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavbarLink to="/services">Prosjekter</NavbarLink>
+              <NavLinks to="/services">Prosjekter</NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavbarLink to="contact">Kontakt</NavbarLink>
+              <NavLinks to="contact">Kontakt</NavLinks>
             </NavItem>
+            <CVButton>CV</CVButton>
           </NavMenu>
         </NavbarContainer>
       </Nav>
