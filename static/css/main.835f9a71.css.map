@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.835f9a71.css","mappings":"AAAA,EACE,qBAAsB,CAGtB,oBAAqB,CADrB,SAEF,CAEA,OALE,QAQF,CAHA,KAEE,wBACF","sources":["App.css"],"sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: Consolas;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background-color: #0a192f;\r\n}\r\n"],"names":[],"sourceRoot":""}
