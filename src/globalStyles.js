@@ -5,7 +5,13 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: monospace;
+
  } 
+ body {
+  background-color: #0a192f;
+}
+
 `;
 
 export const Container = styled.div`

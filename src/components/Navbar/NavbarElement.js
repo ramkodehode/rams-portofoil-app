@@ -34,11 +34,11 @@ const Navbar = () => {
             </NavItem>
 
             <NavItem>
-              <NavLinks to="/services">Prosjekter</NavLinks>
+              <NavLinks to="/prosjekter">Prosjekter</NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks to="contact">Kontakt</NavLinks>
+              <NavLinks to="/kontakt">Kontakt</NavLinks>
             </NavItem>
             <CVButton>CV</CVButton>
           </NavMenu>
