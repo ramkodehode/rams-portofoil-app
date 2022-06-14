@@ -13,9 +13,9 @@ const App = () => {
         <ContentPage />
         <Routes>
           <Route path="/" />
-          <Route path="/ommeg" />
-          <Route path="/arbeid" />
-          <Route path="/Kontakt" />
+          <Route path="/om-meg" />
+          <Route path="/prosjekter" />
+          <Route path="/kontakt" />
         </Routes>
       </Router>
     </>

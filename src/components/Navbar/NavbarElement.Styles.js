@@ -9,10 +9,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
+  font-size: 1rem;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -93,14 +93,14 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 `;
 
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(LinkR)`
   color: #ccd6f6;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.1rem 1.2rem;
   height: 100%;
-  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
 
   &:hover {
     color: #61dafb;
@@ -108,14 +108,31 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer;
   }
 
-  :before {
+  /* :before {
     content: "<";
     color: #61dafb;
   }
   :after {
     content: "/>";
     color: #61dafb;
-  }
+  } */
 `;
 
 export const Photo = styled.figure``;
+
+export const NavItemBtn = styled.li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+`;
+
+export const NavBtnLink = styled(LinkR)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+`;

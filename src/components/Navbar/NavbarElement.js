@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { CVButton } from "../Button/Button.styles";
+import { useState, useEffect } from "react";
+import { Button } from "../../globalStyles";
 import {
   NavLinks,
   NavLogo,
@@ -9,11 +9,27 @@ import {
   NavLogoContainer,
   NavItem,
   MobilIcon,
+  NavItemBtn,
+  NavBtnLink,
 } from "./NavbarElement.styles";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) setButton(false);
+    else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
 
   const handleClick = () => setClick(!click);
   return (
@@ -30,7 +46,7 @@ const Navbar = () => {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to="/">Om meg</NavLinks>
+              <NavLinks to="/om-meg">Om meg</NavLinks>
             </NavItem>
 
             <NavItem>
@@ -40,7 +56,19 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to="/kontakt">Kontakt</NavLinks>
             </NavItem>
-            <CVButton>CV</CVButton>
+            <NavItemBtn>
+              <NavItemBtn>
+                {button ? (
+                  <NavBtnLink to="/CV">
+                    <Button> CV </Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink to="/CV">
+                    <Button> CV</Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn>
+            </NavItemBtn>
           </NavMenu>
         </NavbarContainer>
       </Nav>

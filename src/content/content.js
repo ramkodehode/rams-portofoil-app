@@ -11,7 +11,6 @@ import {
   NameContainer,
 } from "./contentStyle";
 import test from "../images/test.jpg";
-import { CVButton } from "../components/Button/Button.styles";
 const ContentPage = () => {
   return (
     <Content>
@@ -29,7 +28,6 @@ const ContentPage = () => {
           - Liker å bygge ting. Kall meg gjerne Ram for å gjøre ting litt
           enklere.
         </IntroTwo>
-        <CVButton>GitHub</CVButton>
 
         <Heading>Om meg</Heading>
         <AboutMe>
