@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
+import styled from "styled-components";
+import { FaMagento } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
@@ -9,54 +9,39 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
   position: sticky;
   top: 0;
   z-index: 999;
-  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
 `;
 
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 80px;
 
   ${Container}
 `;
 
-export const NavLogoContainer = styled.div`
-  margin-left: 20px;
+export const NavLogo = styled(Link)`
+  color: #fff;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
+  font-size: 2rem;
   display: flex;
   align-items: center;
-  border-radius: 50%;
 `;
 
-export const NavLogo = styled(LinkR)`
-  justify-self: flex-start;
-  border: 2px solid #61dafb;
-  padding: 5px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 23px;
-  display: flex;
-  align-items: center;
-  color: #61dafb;
-  font- :hover,
-  :focus {
-    color: #61dafb;
-    background-color: rgba(192, 192, 192, 0.1);
-  }
+export const NavIcon = styled(FaMagento)`
+  margin-right: 0.5rem;
 `;
 
-export const MobilIcon = styled.div`
+export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
-    color: #61dafb;
     display: block;
     position: absolute;
     top: 0;
@@ -76,49 +61,33 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
-    text-align: center;
     width: 100%;
     height: 90vh;
-    position: fixed;
+    position: absolute;
     top: 80px;
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #0a192f;
+    background: #101522;
   }
 `;
 
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
-`;
-
-export const NavLinks = styled(LinkR)`
-  color: #ccd6f6;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.1rem 1.2rem;
-  height: 100%;
-  font-family: "Source Sans Pro", sans-serif;
 
   &:hover {
-    color: #61dafb;
-    transition: 0.5s all ease;
-    cursor: pointer;
+    border-bottom: 2px solid #61dafb;
   }
 
-  /* :before {
-    content: "<";
-    color: #61dafb;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+
+    &:hover {
+      border: none;
+    }
   }
-  :after {
-    content: "/>";
-    color: #61dafb;
-  } */
 `;
-
-export const Photo = styled.figure``;
 
 export const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {
@@ -130,9 +99,35 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavBtnLink = styled(LinkR)`
+export const NavLinks = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavBtnLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
 `;

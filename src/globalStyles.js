@@ -5,13 +5,8 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  font-family: 'Source Sans Pro', sans-serif;
  } 
- body {
-  background-color: #0a192f;
- 
-}
-
 `;
 
 export const Container = styled.div`
@@ -30,22 +25,21 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: transparent;
+  border-radius: 4px;
+  background: ${({ primary }) => (primary ? "none" : "#none")};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  color: #fff;
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: 2px solid #61dafb;
   color: #61dafb;
-  border: 1.5px solid #61dafb;
-  border-radius: 10%;
-  width: 80px;
-  font-size: 14px;
-  margin: 10px;
-  padding: 10px 5px;
   cursor: pointer;
-  text-decoration: none;
-  transition: 0.5s all ease;
 
-  :hover,
-  :focus {
-    color: #61dafb;
-    background-color: rgba(192, 192, 192, 0.1);
+  &:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    background-color: transparent;
   }
 
   @media screen and (max-width: 960px) {

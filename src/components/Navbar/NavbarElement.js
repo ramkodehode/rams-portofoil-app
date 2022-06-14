@@ -1,26 +1,31 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { IconContext, TbLetterR } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 import {
-  NavLinks,
-  NavLogo,
   Nav,
-  NavMenu,
   NavbarContainer,
-  NavLogoContainer,
+  NavLogo,
+  NavIcon,
+  MobileIcon,
+  NavMenu,
   NavItem,
-  MobilIcon,
   NavItemBtn,
+  NavLinks,
   NavBtnLink,
 } from "./NavbarElement.styles";
-import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
+function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   const showButton = () => {
-    if (window.innerWidth <= 960) setButton(false);
-    else {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
       setButton(true);
     }
   };
@@ -31,49 +36,52 @@ const Navbar = () => {
 
   window.addEventListener("resize", showButton);
 
-  const handleClick = () => setClick(!click);
   return (
     <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogoContainer>
-            <NavLogo to="/">R</NavLogo>
-          </NavLogoContainer>
-
-          <MobilIcon onClick={handleClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </MobilIcon>
-
-          <NavMenu onClick={handleClick} click={click}>
-            <NavItem>
-              <NavLinks to="/om-meg">Om meg</NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks to="/prosjekter">Prosjekter</NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks to="/kontakt">Kontakt</NavLinks>
-            </NavItem>
-            <NavItemBtn>
+      <IconContext.Provider value={{ color: "#61dafb" }}>
+        <Nav>
+          <NavbarContainer>
+            <NavLogo to="/" onClick={closeMobileMenu}>
+              <NavIcon />
+            </NavLogo>
+            <MobileIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
+                <NavLinks to="/" onClick={closeMobileMenu}>
+                  Hjem
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/om-meg" onClick={closeMobileMenu}>
+                  Om meg
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/prosjekter" onClick={closeMobileMenu}>
+                  Prosjekter
+                </NavLinks>
+              </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/CV">
-                    <Button> CV </Button>
+                  <NavBtnLink to="/cv">
+                    <Button primary>CV</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/CV">
-                    <Button> CV</Button>
+                  <NavBtnLink to="/cv">
+                    <Button onClick={closeMobileMenu} fontBig primary>
+                      CV
+                    </Button>
                   </NavBtnLink>
                 )}
               </NavItemBtn>
-            </NavItemBtn>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
     </>
   );
-};
+}
 
 export default Navbar;
