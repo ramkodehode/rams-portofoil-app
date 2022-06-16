@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext, TbLetterR } from "react-icons/lib";
+import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 import {
   Nav,
@@ -65,13 +65,13 @@ function Navbar() {
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/cv">
-                    <Button primary>CV</Button>
+                  <NavBtnLink to="/kontakt">
+                    <Button primary>Kontakt</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/cv">
+                  <NavBtnLink to="/kontakt">
                     <Button onClick={closeMobileMenu} fontBig primary>
-                      CV
+                      Kontakt
                     </Button>
                   </NavBtnLink>
                 )}

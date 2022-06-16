@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background: #0a192f;
  } 
 `;
 
@@ -39,8 +38,8 @@ export const Button = styled.button`
 
   &:hover {
     transition: all 0.3s ease-out;
-    background: #fff;
     background-color: transparent;
+    opacity: 1;
   }
 
   @media screen and (max-width: 960px) {
