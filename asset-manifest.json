@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/rams-portofoil-app/static/css/main.31d6cfe0.css",
-    "main.js": "/rams-portofoil-app/static/js/main.ebed0253.js",
+    "main.js": "/rams-portofoil-app/static/js/main.cab6b5bd.js",
+    "static/media/profile.jpg": "/rams-portofoil-app/static/media/profile.db7a34bfbb50757b4faa.jpg",
     "index.html": "/rams-portofoil-app/index.html",
-    "main.ebed0253.js.map": "/rams-portofoil-app/static/js/main.ebed0253.js.map"
+    "main.cab6b5bd.js.map": "/rams-portofoil-app/static/js/main.cab6b5bd.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.ebed0253.js"
+    "static/js/main.cab6b5bd.js"
   ]
 }
