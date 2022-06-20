@@ -12,6 +12,8 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
+  GitHubLink,
+  ImgBorder,
 } from "./InfoSection.element";
 
 function InfoSection({
@@ -39,16 +41,21 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to="/sign-up">
+                <GitHubLink
+                  target="_blank"
+                  href="https://github.com/ramkodehode"
+                >
                   <Button primary>
-                    GitHub <AiFillGithub />
+                    {buttonLabel} <AiFillGithub />
                   </Button>
-                </Link>
+                </GitHubLink>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
+                <ImgBorder>
+                  <Img src={img} alt={alt} />
+                </ImgBorder>
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>
