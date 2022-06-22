@@ -11,10 +11,8 @@ const App = () => {
         <GlobalStyle />
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/om-meg" />
-          <Route path="/prosjekter" />
-          <Route path="/kontakt" />
+          <Route path="/" extact element={<Home />} />
+          <Route path="/kontakt" extact />
         </Routes>
       </Router>
     </>
