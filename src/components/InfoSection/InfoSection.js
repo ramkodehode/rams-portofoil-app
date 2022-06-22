@@ -29,11 +29,14 @@ function InfoSection({
   img,
   alt,
   imgStart,
+  displayButton,
+  displayImage,
   start,
+  id,
 }) {
   return (
     <>
-      <InfoSec lightBg={lightBg}>
+      <InfoSec lightBg={lightBg} id={id}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
@@ -45,14 +48,14 @@ function InfoSection({
                   target="_blank"
                   href="https://github.com/ramkodehode"
                 >
-                  <Button primary>
+                  <Button displayButton={displayButton} primary>
                     {buttonLabel} <AiFillGithub />
                   </Button>
                 </GitHubLink>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
-              <ImgWrapper start={start}>
+              <ImgWrapper displayImage={displayImage} start={start}>
                 <ImgBorder>
                   <Img src={img} alt={alt} />
                 </ImgBorder>

@@ -4,16 +4,19 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Jeg heter ",
+  displayButton: true,
+  topLine: "Hei, jeg heter ",
   headline: "Ramanan Subramaniam.",
-  description: "Kall meg Ram for å gjøre det litt enklere",
+  description: " - Liker å bygge ting og er veldig fokusert på webdesign",
   buttonLabel: "GitHub",
   img: require("./../../images/profile.jpg"),
   alt: "image",
   start: "",
+  displayImage: true,
 };
 
 export const homeObjTwo = {
+  id: "/om-meg",
   primary: true,
   lightBg: true,
   lightTopLine: false,
@@ -22,9 +25,29 @@ export const homeObjTwo = {
   topLine: "",
   headline: "Om meg",
   description:
-    "Jeg heter Ramanan Subramaniam. Noen kaller meg Ram for å gjøre det litt enklere. Jeg er fra Bergen og vokste opp med PC og internett. Jeg har alltid vært glad i data og teknologi og har vært nysgjerrig på hvordan de fungerer. Jeg har stor interesse for web-design og synes dette er veldig spennende og gøy. Det gjorde at jeg valgte min karriere som front-end utvikler. Jeg har hatt tidligere erfaringer med programmering. Blant annet har jeg laget en del prosjekter som Counter-APP, IMDB API søkemotor i React og en blogg side i Python Flask. Ved siden av driver jeg med musikk. Jeg spiller trommer, liker å gå turer og lese bøker. Som person er jeg behagelig å være med, liker å hjelpe andre mennesker og er samarbeidsvillig.",
+    "Noen kaller meg bare Ram. Jeg er fra Bergen og vokste opp med PC og internett. Jeg har alltid vært glad i data og teknologi og har vært nysgjerrig på hvordan de fungerer. Jeg har stor interesse for web-design og synes dette er veldig spennende og gøy. Det gjorde at jeg valgte min karriere som front-end utvikler. Jeg har hatt tidligere erfaringer med programmering. Blant annet har jeg laget en del prosjekter som Counter-APP, IMDB API søkemotor i React og en blogg side i Python Flask. Ved siden av driver jeg med musikk. Jeg spiller trommer, liker å gå turer og lese bøker. Som person er jeg behagelig å være med, liker å hjelpe andre mennesker og er samarbeidsvillig.",
   buttonLabel: "",
-  imgStart: "",
+  imgStart: true,
   alt: "Vault",
   start: "",
+  displayButton: false,
+};
+
+export const homeObjThree = {
+  id: "/prosjekter",
+  primary: true,
+  lightBg: false,
+  lightTopLine: true,
+  lightText: true,
+  lightTextDesc: true,
+  displayButton: false,
+  topLine: " ",
+  headline: "Prosjekter",
+  description: " Liker å bygge ting og er veldig fokusert på webdesign",
+  buttonLabel: "GitHub",
+  alt: "image",
+  start: "",
+  imgStart: true,
+  displayImage: false,
+  displayButton: false,
 };

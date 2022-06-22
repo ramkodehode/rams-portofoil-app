@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const InfoSec = styled.div`
   color: #fff;
   padding: 50px 10px;
-  height: 450px;
-  background: ${({ lightBg }) => (lightBg ? "#fff" : "#0a192f")};
+  height: 650px;
+  background: ${({ lightBg }) => (lightBg ? "#f6f5fe" : "#0a192f")};
 `;
 
 export const GitHubLink = styled.a``;
@@ -14,7 +14,7 @@ export const InfoRow = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
+  flex-direction: ${({ imgStart }) => (imgStart ? "column" : "row")};
 `;
 
 export const InfoColumn = styled.div`
@@ -47,6 +47,7 @@ export const ImgWrapper = styled.div`
   max-width: 555px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  display: ${({ displayImage }) => (displayImage ? "visible" : "none")};
 `;
 
 export const ImgBorder = styled.div`
@@ -71,7 +72,7 @@ export const Img = styled.img`
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 400px;
+  max-height: 340px;
   border-radius: 20px;
 `;
 
@@ -81,7 +82,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#0a192f")};
+  color: ${({ lightText }) => (lightText ? "#CCD6F6" : "#0a192f")};
 `;
 
 export const Subtitle = styled.p`

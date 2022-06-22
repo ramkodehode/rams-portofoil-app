@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { FaMagento } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { TbLetterR } from "react-icons/tb";
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
@@ -12,7 +13,7 @@ export const Nav = styled.nav`
   font-size: 1.1rem;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
   font-family: "Source Sans Pro", sans-serif;
 `;
 
@@ -24,7 +25,7 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -34,7 +35,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
 `;
 
-export const NavIcon = styled(FaMagento)`
+export const NavIcon = styled(TbLetterR)`
   margin-right: 0.5rem;
 `;
 
@@ -99,13 +100,14 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(LinkS)`
   color: #8892b0;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  cursor: pointer;
   &:hover {
     color: #61dafb;
     transition: all 0.3s ease;
@@ -123,7 +125,7 @@ export const NavLinks = styled(Link)`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled(LinkR)`
   display: flex;
   justify-content: center;
   align-items: center;

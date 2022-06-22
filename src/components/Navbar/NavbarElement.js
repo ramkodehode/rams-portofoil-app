@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
+import { animateScroll as scroll } from "react-scroll";
+import {
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+} from "./../../pages/HomePage/Data";
+
 import {
   Nav,
   NavbarContainer,
@@ -14,8 +21,9 @@ import {
   NavLinks,
   NavBtnLink,
 } from "./NavbarElement.styles";
+import InfoSection from "../InfoSection/InfoSection";
 
-function Navbar() {
+function Navbar({ displayButton }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -36,12 +44,20 @@ function Navbar() {
 
   window.addEventListener("resize", showButton);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
+  const toggleAbout = () => {
+    scroll.scrollTo(<InfoSection {...homeObjTwo} />);
+  };
+
   return (
     <>
       <IconContext.Provider value={{ color: "#61dafb" }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/" onClick={closeMobileMenu}>
+            <NavLogo to="/" onClick={toggleHome}>
               <NavIcon />
             </NavLogo>
             <MobileIcon onClick={handleClick}>
@@ -49,28 +65,49 @@ function Navbar() {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/" onClick={closeMobileMenu}>
+                <NavLinks to="/home" onClick={toggleHome}>
                   Hjem
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/om-meg" onClick={closeMobileMenu}>
+                <NavLinks
+                  to="/om-meg"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
                   Om meg
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/prosjekter" onClick={closeMobileMenu}>
+                <NavLinks
+                  to="/prosjekter"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
                   Prosjekter
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to="/kontakt">
-                    <Button primary>Kontakt</Button>
+                    <Button displayButton primary>
+                      Kontakt
+                    </Button>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to="/kontakt">
-                    <Button onClick={closeMobileMenu} fontBig primary>
+                    <Button
+                      displayButton
+                      onClick={closeMobileMenu}
+                      fontBig
+                      primary
+                    >
                       Kontakt
                     </Button>
                   </NavBtnLink>
