@@ -1,13 +1,15 @@
 import React from "react";
 import { InfoSection } from "../../components";
-import { homeObjOne, homeObjTwo, homeObjThree } from "./Data";
+import Hero from "../../components/Hero/Hero";
+import Projects from "../../components/Projects/Projects";
+import { homeObjOne, homeObjTwo } from "./Data";
 
 export const Home = () => {
   return (
     <>
+      <Hero />
       <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjThree} />
+      <Projects />
     </>
   );
 };

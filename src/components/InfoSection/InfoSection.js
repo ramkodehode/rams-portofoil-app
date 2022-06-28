@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Button } from "../../globalStyles";
-import { AiFillGithub } from "react-icons/ai";
 import {
   InfoSec,
   InfoRow,
@@ -12,9 +11,7 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
-  GitHubLink,
-  ImgBorder,
-} from "./InfoSection.element";
+} from "./InfoSection.elements";
 
 function InfoSection({
   primary,
@@ -29,14 +26,12 @@ function InfoSection({
   img,
   alt,
   imgStart,
-  displayButton,
-  displayImage,
   start,
-  id,
+  visible,
 }) {
   return (
     <>
-      <InfoSec lightBg={lightBg} id={id}>
+      <InfoSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
@@ -44,21 +39,16 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <GitHubLink
-                  target="_blank"
-                  href="https://github.com/ramkodehode"
-                >
-                  <Button displayButton={displayButton} primary>
-                    {buttonLabel} <AiFillGithub />
+                <Link to="/sign-up">
+                  <Button big fontBig primary={primary}>
+                    {buttonLabel}
                   </Button>
-                </GitHubLink>
+                </Link>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
-              <ImgWrapper displayImage={displayImage} start={start}>
-                <ImgBorder>
-                  <Img src={img} alt={alt} />
-                </ImgBorder>
+              <ImgWrapper visible={visible} start={start}>
+                <Img src={img} alt={alt} />
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>
