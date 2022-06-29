@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
 export const InfoSec = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-family: monospace;
   color: #fff;
-  padding: 100px 0;
-  display: flex;
+  padding: 50px;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#0a192f")};
 `;
 
 export const InfoRow = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
@@ -17,9 +21,12 @@ export const InfoRow = styled.div`
 `;
 
 export const InfoColumn = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-bottom: 15px;
   padding-right: 15px;
-  padding-left: 150px;
+  padding-left: 15px;
   flex: 1;
   max-width: 45%;
   flex-basis: 45%;
@@ -43,12 +50,10 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 300px;
+  max-width: 400px;
   display: flex;
   display: ${({ visible }) => (visible ? "visible" : "none")};
-
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
-  margin: 0;
 `;
 
 export const TopLine = styled.div`
@@ -61,12 +66,11 @@ export const TopLine = styled.div`
 `;
 
 export const Img = styled.img`
-  padding-right: 0;
-  border: 0;
+  border-radius: 10px;
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 500px;
+  max-height: 390px;
 `;
 
 export const Heading = styled.h1`
@@ -78,8 +82,8 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
+  max-width: 490px;
+  width: 100%;
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};

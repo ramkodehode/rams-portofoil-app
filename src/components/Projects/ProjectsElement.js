@@ -74,7 +74,7 @@ export const ProjectCardInfo = styled.div`
   display: flex;
   flex-direction: column;
   height: 300px;
-  padding: 24px;
+  padding: 30px;
   align-items: center;
   color: #fff;
 `;

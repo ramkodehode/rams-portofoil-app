@@ -88,7 +88,7 @@ function Navbar({ displayButton }) {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-70}
                 >
                   Prosjekter
                 </NavLinks>
