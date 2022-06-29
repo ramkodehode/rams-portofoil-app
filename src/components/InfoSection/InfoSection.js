@@ -31,7 +31,7 @@ function InfoSection({
 }) {
   return (
     <>
-      <InfoSec lightBg={lightBg}>
+      <InfoSec lightBg={lightBg} id="ommeg">
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>

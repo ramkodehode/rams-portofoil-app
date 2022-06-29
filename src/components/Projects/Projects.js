@@ -14,7 +14,7 @@ import { AiOutlineFolder } from "react-icons/ai";
 
 const Projects = () => {
   return (
-    <ProjectSection>
+    <ProjectSection id="/prosjekter">
       <ProjectsWrapper>
         <ProjectHeading>Prosjekter</ProjectHeading>
         <ProjectContainer>

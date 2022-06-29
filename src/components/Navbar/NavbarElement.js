@@ -71,12 +71,12 @@ function Navbar({ displayButton }) {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="/om-meg"
+                  to="ommeg"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-40}
                 >
                   Om meg
                 </NavLinks>

@@ -1,5 +1,5 @@
 export const homeObjOne = {
-  id: "/om-meg",
+  id: "ommeg",
   primary: true,
   lightBg: true,
   lightTopLine: false,
@@ -20,7 +20,6 @@ export const homeObjOne = {
   visible: true,
 };
 export const homeObjTwo = {
-  id: "/om-meg",
   primary: true,
   lightBg: true,
   lightTopLine: false,
