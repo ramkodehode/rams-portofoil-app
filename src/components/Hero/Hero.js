@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiFillGithub } from "react-icons/ai";
 import { Container, Button } from "../../globalStyles";
 import {
   InfoSec,
@@ -48,12 +49,12 @@ function Hero({
                     {description}Jeg liker å bygge ting og er fokusert på
                     webdesign.
                   </Subtitle>
-                  <Link to="/sign-up">
-                    <Button big fontBig primary={primary}>
-                      {buttonLabel}
-                    </Button>
-                  </Link>
+
+                  <Link to="/sign-up"></Link>
                 </TextWrapper>
+                <Button displayButton primary>
+                  Github <AiFillGithub size={20}></AiFillGithub>
+                </Button>
               </InfoColumn>
               <InfoColumn>
                 <ImgWrapper visible={visible} start={start}>

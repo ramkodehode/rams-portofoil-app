@@ -14,7 +14,11 @@ import {
   FormContainer,
 } from "./Contact.elements";
 
-const Contact = () => {
+const buttonClicked = () => {
+  console.log("Testing one two three");
+};
+
+const Contact = ({ submitForm }) => {
   return (
     <FormWrapper>
       <FormContainer>
@@ -29,7 +33,9 @@ const Contact = () => {
         <Message>Melding</Message>
         <InputMessage placeholder="Skriv her..."></InputMessage>
 
-        <SendButton>Send</SendButton>
+        <SendButton onClick={buttonClicked} type="submit" value="Send">
+          Send
+        </SendButton>
       </FormContainer>
     </FormWrapper>
   );
