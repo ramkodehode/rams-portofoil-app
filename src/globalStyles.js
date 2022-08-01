@@ -24,8 +24,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const FormButton = styled.form``;
+
+export const Button = styled.a`
   border-radius: 4px;
+  text-decoration: none;
   background: ${({ primary }) => (primary ? "#0a192f" : "red")};
   display: ${({ displayButton }) => (displayButton ? "visible" : "none")};
   white-space: nowrap;

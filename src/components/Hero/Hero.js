@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
-import { Container, Button } from "../../globalStyles";
+import { Container, Button, FormButton } from "../../globalStyles";
 import {
   InfoSec,
   InfoRow,
@@ -52,7 +52,13 @@ function Hero({
 
                   <Link to="/sign-up"></Link>
                 </TextWrapper>
-                <Button displayButton primary>
+
+                <Button
+                  href="https://github.com/ramkodehode"
+                  target={"_blank"}
+                  displayButton
+                  primary
+                >
                   Github <AiFillGithub size={20}></AiFillGithub>
                 </Button>
               </InfoColumn>
