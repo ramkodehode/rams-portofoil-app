@@ -46,15 +46,19 @@ const Contact = () => {
     <FormWrapper ref={form} onSubmit={sendEmail}>
       <FormContainer>
         <FirstName>Fornavn</FirstName>
-        <InputFirstName></InputFirstName>
+        <InputFirstName name="first_name" required></InputFirstName>
         <LastName>Etternavn</LastName>
-        <InputLastName></InputLastName>
+        <InputLastName name="last_name" required></InputLastName>
 
         <Email>E-post</Email>
-        <InputEmail required></InputEmail>
+        <InputEmail name="user_email" required></InputEmail>
 
         <Message>Melding</Message>
-        <InputMessage name="message" placeholder="Skriv her..."></InputMessage>
+        <InputMessage
+          required
+          name="user_message"
+          placeholder="Skriv her..."
+        ></InputMessage>
 
         <SendButton onClick={buttonClicked} type="submit" value="Send">
           Send
