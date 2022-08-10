@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/NavbarElement";
 import GlobalStyle from "./globalStyles";
@@ -13,7 +12,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" extact element={<Home />} />
-          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/kontakt" extact element={<Contact />} />
         </Routes>
       </Router>
     </>
