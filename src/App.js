@@ -7,7 +7,7 @@ import Contact from "./pages/ContactPage/Contact";
 const App = () => {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <GlobalStyle />
         <Navbar />
         <Routes>
