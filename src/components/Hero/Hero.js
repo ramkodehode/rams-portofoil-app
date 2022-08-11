@@ -40,7 +40,7 @@ function Hero({
               <InfoColumn>
                 <TextWrapper>
                   <TopLine lightTopLine={lightTopLine}>
-                    {topLine} Jeg heter
+                    {topLine} Jeg heter "TEST"
                   </TopLine>
                   <Heading lightText={lightText}>
                     {headline}Ramanan Subramaniam.
