@@ -11,8 +11,8 @@ const App = () => {
         <GlobalStyle />
         <Navbar />
         <Routes>
-          <Route path="/" extact element={<Home />} />
-          <Route path="/kontakt" extact element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/kontakt" element={<Contact />} />
         </Routes>
       </Router>
     </>
