@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
-import { animateScroll as scroll } from "react-scroll";
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+import { Button } from '../../globalStyles';
+import { animateScroll as scroll } from 'react-scroll';
 import {
   homeObjOne,
   homeObjTwo,
   homeObjThree,
-} from "./../../pages/HomePage/Data";
+} from './../../pages/HomePage/Data';
 
 import {
   Nav,
@@ -20,8 +20,8 @@ import {
   NavItemBtn,
   NavLinks,
   NavBtnLink,
-} from "./NavbarElement.styles";
-import InfoSection from "../InfoSection/InfoSection";
+} from './NavbarElement.Styles';
+import InfoSection from '../InfoSection/InfoSection';
 
 function Navbar({ displayButton }) {
   const [click, setClick] = useState(false);
@@ -42,7 +42,7 @@ function Navbar({ displayButton }) {
     showButton();
   }, []);
 
-  window.addEventListener("resize", showButton);
+  window.addEventListener('resize', showButton);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -54,7 +54,7 @@ function Navbar({ displayButton }) {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#61dafb" }}>
+      <IconContext.Provider value={{ color: '#61dafb' }}>
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
