@@ -52,6 +52,11 @@ function Navbar({ displayButton }) {
     scroll.scrollTo(<InfoSection {...homeObjTwo} />);
   };
 
+  const closeandToggleHome = () => {
+    scroll.scrollToTop();
+    closeMobileMenu();
+  };
+
   return (
     <>
       <IconContext.Provider value={{ color: '#61dafb' }}>
@@ -65,7 +70,7 @@ function Navbar({ displayButton }) {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/home" onClick={toggleHome}>
+                <NavLinks to="/home" onClick={closeandToggleHome}>
                   Hjem
                 </NavLinks>
               </NavItem>
@@ -77,6 +82,7 @@ function Navbar({ displayButton }) {
                   spy={true}
                   exact="true"
                   offset={-40}
+                  onClick={closeMobileMenu}
                 >
                   Om meg
                 </NavLinks>
@@ -89,13 +95,14 @@ function Navbar({ displayButton }) {
                   spy={true}
                   exact="true"
                   offset={-70}
+                  onClick={closeMobileMenu}
                 >
                   Prosjekter
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/kontakt">
+                  <NavBtnLink to="/kontakt" onClick={closeMobileMenu}>
                     <Button displayButton primary>
                       Kontakt
                     </Button>
