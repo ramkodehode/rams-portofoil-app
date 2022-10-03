@@ -3,11 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Button } from '../../globalStyles';
 import { animateScroll as scroll } from 'react-scroll';
-import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
-} from './../../pages/HomePage/Data';
+import { homeObjOne, homeObjTwo, homeObjThree } from '../HomePage/Data';
 
 import {
   Nav,

@@ -1,18 +1,16 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/NavbarElement";
-import GlobalStyle from "./globalStyles";
-import { Home } from "./pages/HomePage/Home";
-import Contact from "./pages/ContactPage/Contact";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './components/HomePage/Home';
+import GlobalStyle from './globalStyles';
+import ContactPage from './pages/contact';
 
 const App = () => {
   return (
     <>
       <Router>
         <GlobalStyle />
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/kontakt" element={<ContactPage />} />
         </Routes>
       </Router>
     </>
