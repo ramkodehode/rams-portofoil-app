@@ -15,6 +15,7 @@ import {
   Banner,
 } from './Contact.elements';
 import emailjs from '@emailjs/browser';
+import { NavIcon, NavLogo } from '../Navbar/NavbarElement.Styles';
 
 const buttonClicked = () => {
   console.log('Testing one two three');
@@ -45,7 +46,11 @@ const Contact = () => {
 
   return (
     <>
-      <Banner></Banner>
+      <Banner>
+        <NavLogo to="/">
+          <NavIcon />
+        </NavLogo>
+      </Banner>
 
       <FormWrapper ref={form} onSubmit={sendEmail}>
         <FormContainer>
