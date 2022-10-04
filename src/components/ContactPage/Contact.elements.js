@@ -1,4 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const Banner = styled.nav`
+  background: #0a192f;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: 'Source Sans Pro', sans-serif;
+`;
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -17,7 +30,7 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  width: 750px;
   border: 2px #0a192f solid;
   border-radius: 20px;
 `;

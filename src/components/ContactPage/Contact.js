@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import {
   FirstName,
   LastName,
@@ -12,11 +12,12 @@ import {
   InputMessage,
   SendButton,
   FormContainer,
-} from "./Contact.elements";
-import emailjs from "@emailjs/browser";
+  Banner,
+} from './Contact.elements';
+import emailjs from '@emailjs/browser';
 
 const buttonClicked = () => {
-  console.log("Testing one two three");
+  console.log('Testing one two three');
 };
 
 const Contact = () => {
@@ -27,10 +28,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_uug4mbr",
-        "template_6mwzbnq",
+        'service_uug4mbr',
+        'template_6mwzbnq',
         form.current,
-        "user_eDz6z61ypctV8WwCbGfsH"
+        'user_eDz6z61ypctV8WwCbGfsH'
       )
       .then(
         (result) => {
@@ -43,28 +44,32 @@ const Contact = () => {
   };
 
   return (
-    <FormWrapper ref={form} onSubmit={sendEmail}>
-      <FormContainer>
-        <FirstName>Fornavn</FirstName>
-        <InputFirstName name="first_name" required></InputFirstName>
-        <LastName>Etternavn</LastName>
-        <InputLastName name="last_name" required></InputLastName>
+    <>
+      <Banner></Banner>
 
-        <Email>E-post</Email>
-        <InputEmail name="user_email" required></InputEmail>
+      <FormWrapper ref={form} onSubmit={sendEmail}>
+        <FormContainer>
+          <FirstName>Fornavn</FirstName>
+          <InputFirstName name="first_name" required></InputFirstName>
+          <LastName>Etternavn</LastName>
+          <InputLastName name="last_name" required></InputLastName>
 
-        <Message>Melding</Message>
-        <InputMessage
-          required
-          name="user_message"
-          placeholder="Skriv her..."
-        ></InputMessage>
+          <Email>E-post</Email>
+          <InputEmail name="user_email" required></InputEmail>
 
-        <SendButton onClick={buttonClicked} type="submit" value="Send">
-          Send
-        </SendButton>
-      </FormContainer>
-    </FormWrapper>
+          <Message>Melding</Message>
+          <InputMessage
+            required
+            name="user_message"
+            placeholder="Skriv her..."
+          ></InputMessage>
+
+          <SendButton onClick={buttonClicked} type="submit" value="Send">
+            Send
+          </SendButton>
+        </FormContainer>
+      </FormWrapper>
+    </>
   );
 };
 
