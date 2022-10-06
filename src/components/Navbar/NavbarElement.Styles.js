@@ -34,10 +34,12 @@ export const NavLogo = styled(LinkR)`
   display: flex;
   align-items: center;
 
-  img {
+  &:hover {
+    img {
     width: 50px;
     height: 50px;
   }
+
 `;
 
 export const NavIcon = styled(TbLetterR)`
