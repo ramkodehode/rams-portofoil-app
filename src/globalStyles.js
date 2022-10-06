@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,14 +29,14 @@ export const FormButton = styled.form``;
 export const Button = styled.a`
   border-radius: 4px;
   text-decoration: none;
-  background: ${({ primary }) => (primary ? "#0a192f" : "red")};
-  display: ${({ displayButton }) => (displayButton ? "visible" : "none")};
+  background: ${({ primary }) => (primary ? '#0a192f' : 'red')};
+  display: ${({ displayButton }) => (displayButton ? 'visible' : 'none')};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
   color: #fff;
-  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;
-  border: 2px solid #61dafb;
+  border: 1.5px solid #61dafb;
   color: #61dafb;
   cursor: pointer;
 

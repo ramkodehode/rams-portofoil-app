@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { TbLetterR } from "react-icons/tb";
-import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
-import { Container } from "../../globalStyles";
+import styled from 'styled-components';
+import { TbLetterR } from 'react-icons/tb';
+import { Link as LinkS } from 'react-scroll';
+import { Link as LinkR } from 'react-router-dom';
+import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
   background: #0a192f;
@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -30,9 +30,14 @@ export const NavLogo = styled(LinkR)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  width: 20px;
   display: flex;
   align-items: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const NavIcon = styled(TbLetterR)`
@@ -66,7 +71,7 @@ export const NavMenu = styled.ul`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    left: ${({ click }) => (click ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
     background: #0a192f;

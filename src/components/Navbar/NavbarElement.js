@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons/lib';
 import { Button } from '../../globalStyles';
 import { animateScroll as scroll } from 'react-scroll';
 import { homeObjOne, homeObjTwo, homeObjThree } from '../HomePage/Data';
+import Icon from './../../images/RLogo.svg';
 
 import {
   Nav,
@@ -59,7 +60,7 @@ function Navbar({ displayButton }) {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              <NavIcon />
+              <img src={Icon} alt="React Logo" />
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

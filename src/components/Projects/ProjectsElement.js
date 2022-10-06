@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const ProjectSection = styled.section`
   background: #0a192f;
@@ -48,7 +48,7 @@ export const ProjectContainer = styled.text`
 `;
 
 export const ProjectCard = styled(Link)`
-  border: 2px solid #61dafb;
+  border: 1.5px solid #61dafb;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
   width: 240px;
   height: 240px;
