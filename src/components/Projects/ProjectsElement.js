@@ -76,13 +76,13 @@ export const ProjectCardInfo = styled.div`
   height: 300px;
   padding: 30px;
   align-items: center;
-  color: #fff;
+  color: #8892b0;
 `;
 
 export const ProjectTitle = styled.div`
   margin-bottom: 5px;
   font-size: 18px;
-  color: white;
+  color: #ccd6f6;
 `;
 
 export const ProjectDesribtion = styled.h1`
