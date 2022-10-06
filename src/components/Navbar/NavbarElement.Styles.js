@@ -36,10 +36,10 @@ export const NavLogo = styled(LinkR)`
 
   &:hover {
     img {
-    width: 50px;
-    height: 50px;
+      width: 50px;
+      height: 50px;
+    }
   }
-
 `;
 
 export const NavIcon = styled(TbLetterR)`
