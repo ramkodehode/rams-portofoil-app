@@ -13,6 +13,10 @@ export const Banner = styled.nav`
   font-family: 'Source Sans Pro', sans-serif;
 `;
 
+export const ContactBody = styled.div`
+  background: #0a192f;
+`;
+
 export const FormWrapper = styled.form`
   display: flex;
   flex-direction: row;
@@ -23,6 +27,7 @@ export const FormWrapper = styled.form`
   /* border: 2px solid red; */
   margin: 0;
   padding: 100px;
+  color: #8892b0;
 `;
 
 export const FormContainer = styled.div`
@@ -31,7 +36,7 @@ export const FormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 750px;
-  border: 2px #0a192f solid;
+  border: 2px #00ffffff solid;
   border-radius: 20px;
 `;
 

@@ -13,9 +13,11 @@ import {
   SendButton,
   FormContainer,
   Banner,
+  ContactBody,
 } from './Contact.elements';
 import emailjs from '@emailjs/browser';
 import { NavIcon, NavLogo } from '../Navbar/NavbarElement.Styles';
+import Icon from './../../images/RLogo.svg';
 
 const buttonClicked = () => {
   console.log('Testing one two three');
@@ -45,10 +47,10 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <ContactBody>
       <Banner>
         <NavLogo to="/">
-          <NavIcon />
+          <img src={Icon} alt="React Logo" />
         </NavLogo>
       </Banner>
 
@@ -74,7 +76,7 @@ const Contact = () => {
           </SendButton>
         </FormContainer>
       </FormWrapper>
-    </>
+    </ContactBody>
   );
 };
 
