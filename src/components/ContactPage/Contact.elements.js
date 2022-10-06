@@ -15,6 +15,8 @@ export const Banner = styled.nav`
 
 export const ContactBody = styled.div`
   background: #0a192f;
+  color: #8892b0;
+  font-family: monospace;
 `;
 
 export const FormWrapper = styled.form`
@@ -26,7 +28,7 @@ export const FormWrapper = styled.form`
   font-family: monospace;
   /* border: 2px solid red; */
   margin: 0;
-  padding: 100px;
+  padding: 50px;
   color: #8892b0;
 `;
 
@@ -38,6 +40,14 @@ export const FormContainer = styled.div`
   width: 750px;
   border: 2px #00ffffff solid;
   border-radius: 20px;
+`;
+
+export const Heading = styled.h1`
+  font-size: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ccd6f6;
 `;
 
 export const FirstName = styled.label``;

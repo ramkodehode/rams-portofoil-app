@@ -14,6 +14,7 @@ import {
   FormContainer,
   Banner,
   ContactBody,
+  Heading,
 } from './Contact.elements';
 import emailjs from '@emailjs/browser';
 import { NavIcon, NavLogo } from '../Navbar/NavbarElement.Styles';
@@ -53,6 +54,7 @@ const Contact = () => {
           <img src={Icon} alt="React Logo" />
         </NavLogo>
       </Banner>
+      <Heading>Kontakt</Heading>
 
       <FormWrapper ref={form} onSubmit={sendEmail}>
         <FormContainer>
