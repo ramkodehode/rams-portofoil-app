@@ -4,25 +4,21 @@ import { Link } from 'react-router-dom';
 export const ProjectSection = styled.section`
   background: #0a192f;
   padding: 100px 0 160px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   font-family: monospace;
+
+  @media screen and (max-width: 800) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid red;
+  }
 `;
 
 export const ProjectsWrapper = styled.body`
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 0 auto;
-
-  @media screen and (max-width: 960px) {
-    margin: 0 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const ProjectHeading = styled.h1`
@@ -38,12 +34,11 @@ export const ProjectContainer = styled.text`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 960) {
+  @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
 `;
 
@@ -63,7 +58,6 @@ export const ProjectCard = styled(Link)`
     color: #1c2237;
   }
   @media screen and (max-width: 960px) {
-    width: 90%;
     &:hover {
       transform: none;
     }

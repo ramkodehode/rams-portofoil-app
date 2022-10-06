@@ -91,6 +91,10 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#ccd6f6')};
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Subtitle = styled.p`
