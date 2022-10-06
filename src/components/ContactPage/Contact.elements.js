@@ -38,7 +38,7 @@ export const FormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 750px;
-  border: 2px #00ffffff solid;
+  border: 1.5px #00ffffff solid;
   border-radius: 20px;
 `;
 
